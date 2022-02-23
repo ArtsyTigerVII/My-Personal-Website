@@ -2,42 +2,6 @@
 <html lang="en">
 
 <head>
-  <script>
-    function tim()
-    {
-        var h=new Date().getHours();
-        if (new Date().getDay()=='0')
-        {day="Sunday";}
-        else if (new Date().getDay()=='1')
-        {day="Monday";}
-        else if (new Date().getDay()=='2')
-        {day="Tuesday";}
-        else if (new Date().getDay()=='3')
-        {day="Wednesday";}
-        else if (new Date().getDay()=='4')
-        {day="Thursday";}
-        else if (new Date().getDay()=='5')
-        {day='Friday';}
-        else if (new Date().getDay()=='6')
-        {day="Saturday";}
-        var mo=new Date().getMonth()+1;
-        if (mo<10) {mo='0'+mo;}
-        var yr=new Date().getFullYear();
-        var m=new Date().getMinutes();
-        var s=new Date().getSeconds();
-        if (h<10) {h='0'+h;}
-        if (m<10) {m='0'+m;}
-        if (s<10) {s='0'+s;}
-        var t=h+':'+m+':'+s;
-        document.getElementById("g").innerHTML=t;
-        ref()
-    }
-    function ref()
-    { 
-        var t1=1000;
-        myt=setTimeout('tim()',1000)
-    }
-</script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -51,9 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -73,7 +35,7 @@
   ======================================================== -->
 </head>
 
-<body onload="tim()">
+<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -90,7 +52,7 @@
           <li><a href="portfolio.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
-          <h1 id="g" style="text-align: right; padding-left: 900px;"></h1>
+          <li><a href="js.html">JavaScript Programs</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -109,7 +71,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
       <h1>Sravya Badam</h1>
-      <h2>"Giving up doesn't always mean you're weak. Sometimes you're just strong enough to let go." - Taylor Swift</h2>
+      <h2>I'm a student who lives in Seattle, Washington</h2>
       <a href="about.html" class="btn-about">About Me</a>
     </div>
   </section><!-- End Hero -->
