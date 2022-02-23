@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>JavaScript</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.6.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script>
+    function multi()
+    {
+        var n=document.getElementById("num").value;
+        for(var i=1; i<=12; i++)
+            {
+                var p=n*i;
+                document.getElementById("mul").innerHTML+=n+"x"+i+"="+p+"<br>";
+            }
+    }
+    function Clea()
+    {
+        document.getElementById("num").value="";
+        document.getElementById("mul").innerHTML="";
+    }
+//Even odd//
+    function check()
+    {
+        num=document.getElementById("n").value;
+        if (num%2==0)
+            document.getElementById("res").value=num + " is an even number";
+        else
+            document.getElementById("res").value=num + " is an odd number";
+    }
+
+    function checkp()
+    {
+        var found=true;
+        var n=document.getElementById("number").value;
+        for(var a=2; a<=n/2; a++)
+            { 
+                if (n%a ==0)
+                    {
+                        found=false;
+                        break;
+                    }
+            }
+        if (found==false)
+            document.getElementById("result").innerHTML = "Composite"
+        else
+            document.getElementById("result").innerHTML="Prime"
+
+    }
+</script>
+
+<script>
+    function nod()
+    {
+        var month=document.getElementById("mo").value;
+        var nod;
+        alert(month);
+        if(month=="January" || month=="March" || month=="May" || month=="July" || month=="August" || month=="October" || month=="December")
+        { nod=31; }
+        else if (month=="Febuary")
+        { nod=29; }
+        else
+        { nod=30; }
+        alert(nod);
+
+        document.getElementById("mo").innerHTML = nod;
+    }
+</script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Sravya</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a class="active" href="js.html">JavaScript Programs</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= JavaScript Project Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>JavaScript Programs</h2>
+          <p>Here are all of my JavaScript projects!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">  
+                <h1>Multiplication Table</h1>
+                <label for="num">Enter any number: </label>
+                <input type="text" id="num">
+                <br><br>
+                <button onclick="multi()">OK</button>
+                <button onclick="Clea()">Clear</button>
+                <br>
+                <p id="mul">
+                </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+                <h1>Checking the number is even or odd</h1>
+                <label for="n">Enter any number</label>
+                <input type="text" id="n" name="n">
+                <br><br>
+                <label for="res">Result</label>
+                <input type="text" id="res" disabled>
+                <br><br>
+                <button onclick="check()">Check</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-pink">
+                <h1>Check if the number is prime or composite</h1>
+                <br><br>
+                <label for="number">Enter any number:
+                    <input type="text" id="number"> </label>
+                <br><br>
+                <button onclick="checkp()">Check</button>
+                <br><br>
+                <p id="result">
+            
+                </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+                <h1>Simple Javascript Calculator</h1>
+                <table style="border: 2px solid blue; text-align: center;">
+                    <tr>
+                        <td colspan="4"> <input type="text" id="display" style="text-align: right;"> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="b1" value="1" onclick="display.value+='1'"></td>
+                        <td><input type="button" name="b2" value="2" onclick="display.value+= '2'"></td>
+                        <td><input type="button" name="b3" value="3" onclick="display.value += '3'"></td>
+                        <td><input type="button" name="Add" value="+" onclick="display.value += '+'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="b4" value="4" onclick="display.value += '4'"></td>
+                        <td><input type="button" name="b5" value="5" onclick="display.value += '5'"></td>
+                        <td><input type="button" name="b6" value="6" onclick="display.value += '6'"></td>
+                        <td><input type="button" name="Subtract" value="-" onclick="display.value += '-'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="b7" value="7" onclick="display.value += '7'"></td>
+                        <td><input type="button" name="b8" value="8" onclick="display.value += '8'"></td>
+                        <td><input type="button" name="b9" value="9" onclick="display.value += '9'"></td>
+                        <td><input type="button" name="Mul" value="x" onclick="display.value += '*'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="Clear" value="C" onclick="display.value = ' '"></td>
+                        <td><input type="button" name="0" value="0" onclick="display.value += '0'"></td>
+                        <td><input type="button" name="Equal" value="=" onclick="display.value = eval(display.value)"></td>
+                        <td><input type="button" name="Div" value="/" onclick="display.value += '/'"></td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-red">
+                <h1>The amount of days in a month</h1>
+                <h1 id="n"></h1>
+            <select id="mo" onchange="nod()">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-teal">
+            
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sravya Badam</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
