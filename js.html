@@ -241,7 +241,27 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-teal">
-            
+              <canvas id="c1" height="320" width="500" style="border: 2px solid red;"></canvas>
+    <script>
+        function draw(x,y,r,col,a)
+        {
+            b.beginPath();
+            b.arc(x,y,r,0, 2*Math.PI);
+            b.fillStyle=col;
+            b.fill();
+            b.stroke();
+        }
+        var a=document.getElementById("c1");
+        var b=a.getContext("2d");
+        draw(330,100,40, "black",2);
+        draw(160,100,40, "black",2);
+        draw(250,170,100, "antiquewhite",2);
+        draw(200,150,20, "white",2);
+        draw(200,160,10, "black",2);
+        draw(300,150,20, "white",2);
+        draw(300,160,10, "black",2);
+        draw(250,190,30, "white",1);
+    </script>           
             </div>
           </div>
 
