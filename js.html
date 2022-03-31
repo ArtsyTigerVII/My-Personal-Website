@@ -141,6 +141,32 @@
         </div>
 
         <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+              <canvas id="can" height="500" width="1200" style="border: 2px solid pink; background-color: lightblue"></canvas>
+              <script>
+                  var c=document.getElementById("can");
+                  var p=c.getContext("2d");
+                  var image1= new Image();
+                  image1.onload=start;
+                  image1.onerror=function(){alert(image.src+"loading error")};
+                  image1.src="assets/img/macaronsLG.jpg";
+                  function start()
+                  {
+                      p.drawImage(image1, 90, 90, 300, 300);
+                  }
+                  p.fillStyle="Black";
+                  p.font="80px 'Palette Mosaic'";
+                  p.fillText("Hello", 400, 100);
+                  p.fillText("Bonjour", 500, 200);
+                  p.fillText("Ni Hao", 600, 300);
+                  p.fillText("Namaste", 450, 400);
+                  p.fillText("Hola", 650, 85);
+                  p.fillText("Aloha", 800, 160);
+                  p.stroke();
+              </script>
+            </div>
+          </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue">  
                 <h1>Multiplication Table</h1>
@@ -264,7 +290,7 @@
     </script>           
             </div>
           </div>
-
+          
         </div>
 
       </div>
